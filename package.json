@@ -1,0 +1,39 @@
+{
+	"name": "angular-unit-testing-snippets",
+	"publisher": "madhusuthananb",
+	"displayName": "Angular Unit Testing Snippets (Version 2+)",
+	"description": "Angular Unit Testing Snippets recommendation following best practices, which produces good readability in the build system.",
+	"icon": "images/logo.png",
+	"galleryBanner": {
+		"color": "#190000",
+		"theme": "dark"
+	},
+	"license": "SEE LICENSE IN LICENSE.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Madhusuthanan-B/Angular-Testing-Snippets.git"
+	},
+	"keywords": [
+		"Angular",
+		"Angular Test",
+		"Angular Unit Test",
+		"Angular 2",
+		"Angular 8",
+		"TypeScript",
+		"Testing"
+	],
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.35.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [{
+			"language": "typescript",
+			"path": "./snippets/snippets.json"
+		}]
+	},
+	"dependencies": {}
+}
