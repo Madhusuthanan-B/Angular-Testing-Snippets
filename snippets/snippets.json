@@ -1,1 +1,16 @@
-{}
+{
+    "Test Component (Basic)": {
+        "prefix": "jat-component-basic",
+        "description": "Angular Component basic test setup to run in isolation (No Mocks)",
+        "body": [
+          "import { async, ComponentFixture, TestBed } from '@angular/core/testing';",
+          "import { NO_ERRORS_SCHEMA } from '@angular/core';",
+          "",
+          "import { ReplaceWithYourComponent } from './ReplaceWithYourComponentPath';",
+          "",
+          "describe('ReplaceWithYourComponent: ', () => {",
+          "});",
+          ""
+        ]
+      }
+}
