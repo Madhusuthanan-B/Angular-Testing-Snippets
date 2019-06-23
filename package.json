@@ -1,8 +1,8 @@
 {
 	"name": "angular-unit-testing-snippets",
 	"publisher": "madhusuthananb",
-	"displayName": "Angular Unit Testing Snippets (Version 2+)",
-	"description": "Angular Unit Testing Snippets recommendation following best practices, which produces good readability in the build system.",
+	"displayName": "Angular Jasmine Unit Testing Snippets",
+	"description": "Angular Jasmine Unit Testing Snippets. Follows best practices, which produces good readability in the build system.",
 	"icon": "images/logo.png",
 	"galleryBanner": {
 		"color": "#190000",
@@ -14,13 +14,17 @@
 		"url": "https://github.com/Madhusuthanan-B/Angular-Testing-Snippets.git"
 	},
 	"keywords": [
-		"Angular",
+		"Angular Jasmine Unit Testing",
 		"Angular Test",
 		"Angular Unit Test",
+		"Unit Testing",
+		"Angular Jasmine Testing",
+		"Angular",
 		"Angular 2",
 		"Angular 8",
 		"TypeScript",
-		"Testing"
+		"Testing",
+		"Unit Testing Snippets by Madhu"
 	],
 	"version": "0.0.1",
 	"engines": {
