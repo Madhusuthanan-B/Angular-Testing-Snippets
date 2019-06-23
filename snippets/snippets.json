@@ -79,5 +79,42 @@
           "});",
           ""
         ]
+      },
+    "MockService Sample Setup Which returns success observable response": {
+        "prefix": "jat-mock-observable-success-service",
+        "description": "Mock service sample returning observable",
+        "body": [
+          "class NameOfYourMockService {",
+          "\tmethodInTheServiceToBeMocked() {",
+          "\t\t/* Pass the expected response within of()*/",
+          "\t\treturn Observable.of();",
+          "\t}",
+          "}",
+          ""
+        ]
+      },
+    "Test Suite": {
+        "prefix": "jat-suite",
+        "description": "Jasmine Test Suite (Describe block)",
+        "body": [
+         "describe('MethodUnderTest()', () => {",
+          "",
+          "\tit('should ', () => {",
+          "",
+          "\t});",
+          "",
+         "});",
+          ""
+        ]
+      },
+    "Test Spec": {
+        "prefix": "jat-spec",
+        "description": "Jasmine Test Spec (it block)",
+        "body": [
+          "it('should ', () => {",
+            "",
+          "});",
+          ""
+        ]
       }
 }
