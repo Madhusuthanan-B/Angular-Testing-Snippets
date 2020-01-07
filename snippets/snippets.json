@@ -40,7 +40,7 @@
         "body": [
           "import { async, ComponentFixture, TestBed } from '@angular/core/testing';",
           "import { NO_ERRORS_SCHEMA } from '@angular/core';",
-          "import { Observable, of } from 'rxjs';",
+          "import { of } from 'rxjs';",
           "",
           "import { ReplaceWithYourComponent } from './ReplaceWithYourComponentPath';",
           "import { ReplaceWithYourServiceToBeMocked } from './ReplaceWithYourServicePath';",
@@ -48,7 +48,7 @@
           "class NameOfYourMockService {",
           "\tmethodInTheServiceToBeMocked() {",
           "\t\t/* Pass the expected response within of()*/",
-          "\t\treturn Observable.of();",
+          "\t\treturn of();",
           "\t}",
           "}",
           "",
@@ -87,7 +87,7 @@
           "class NameOfYourMockService {",
           "\tmethodInTheServiceToBeMocked() {",
           "\t\t/* Pass the expected response within of()*/",
-          "\t\treturn Observable.of();",
+          "\t\treturn of();",
           "\t}",
           "}",
           ""
@@ -116,5 +116,44 @@
           "});",
           ""
         ]
-      }
+      },
+    "Spec to test timer methods": {
+        "prefix": "jat-timer-spec",
+        "description": "Jasmine Test Spec (it block) to test methods which runs timer.",
+        "body": [
+          "it('should ', fakeAsync(() => {",
+            "\t// Act: Call your method which has setTimeOut / setInterval",
+            "\ttick(/* Pass the wait time of your actual method*/);",
+            "\t// Assert",
+          "}));",
+          ""
+        ]
+    },
+    "Use Value Provider": {
+        "prefix": "jat-use-value-provider",
+        "description": "Angular useValue provider to inject mock value as dependency instead of an injection token or injected service.",
+        "body": [
+          "{ provide: 'Replace With Your Service or Injection Token', useValue: 'Replace with the value you need to mock.' }"
+        ]
+    },
+    "Use Class Provider": {
+      "prefix": "jat-use-class-provider",
+      "description": "Angular useClass provider to inject a mock class as dependency instead of an injection token or injected service.",
+      "body": [
+        "{ provide: 'Replace With Your Service or Injection Token', useClass: 'Replace with your mock class.' }"
+      ]
+    },
+    "Mock Router": {
+      "prefix": "jat-mock-router",
+      "description": "Mock Class to use as a mock for the injected Router class (Has minimal methods like navigate, navigateByUrl etc. These can be extended) along with a useClass provider which can be used in your TestBed provider.",
+      "body": [
+        "class MockRouter {",
+        "\tnavigate(command: any[], extras?: any) { }",
+        "\tnavigateByUrl(url: string, extras?: any) { }",
+        "}",
+        "",
+        "const MOCK_ROUTER_PROVIDER = { provide: Router, useClass: MockRouter };",
+        ""
+      ]
+    }
 }
