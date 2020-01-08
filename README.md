@@ -1,4 +1,10 @@
 # Angular Unit Testing Snippets for VSCode (Angular 2+)
+-------------------
+
+[![Version](https://vsmarketplacebadge.apphb.com/version/madhusuthanan.angular-unit-testing-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=madhusuthanan.angular-unit-testing-snippets)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/madhusuthanan.angular-unit-testing-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=madhusuthanan.angular-unit-testing-snippets)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating/madhusuthanan.angular-unit-testing-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=madhusuthanan.angular-unit-testing-snippets)
+
 Visual Studio Code Angular Unit Testing Snippets in Jasmine
 
 These snippets were created after observing that, these code blocks / mocks / techniques were used a lot while we write unit tests in angular.
