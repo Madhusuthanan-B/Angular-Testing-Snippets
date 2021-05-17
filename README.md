@@ -27,3 +27,6 @@ Type jat- to get the snippet intellisense. Press enter to select a snippet
 | jat-use-value-provider              | Angular useValue provider to inject mock value as dependency instead of an injection token or injected service.                         |
 | jat-use-class-provider              | Angular useClass provider to inject a mock class as dependency instead of an injection token or injected service.                       |
 | jat-mock-router                     | Mock Class to use as a mock for the injected Router class (Has minimal methods like navigate, navigateByUrl etc. These can be extended) |
+| jat-http-success-spec                     | Generates an it block (Test spec), which makes use of angular HttpTestingController to test http requests. We can flush with mock data as a response for matching request |
+| jat-http-error-spec                     | Generates an it block (Test spec), which makes use of angular HttpTestingController to test http requests. We can flush with Error event and mock error data |
+| jat-dispatch-event-spec                     | Generates an it block (Test spec) to dispatch an event to simulate user interactions (like mouseover, mouseout . . ) in unit tests) |
