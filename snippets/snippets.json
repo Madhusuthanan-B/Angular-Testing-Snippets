@@ -158,7 +158,7 @@
     },
     "Using HttpTestingController for success request": {
       "prefix": "jat-http-success-spec",
-      "description": "Jasmine Test Spec (it block), which makes use of angular HttpTestingController to test http requests. We can flush with mock data as a response for matching request",
+      "description": "Spec that makes use of HttpTestingController to test http requests. We can flush with mock data as a response for matching request",
       "body": [
         "it('should $1', () => {",
           "\t // Action 1: Import HttpTestingController from '@angular/common/http/testing'",
@@ -175,7 +175,7 @@
     },
     "Using HttpTestingController for error request": {
       "prefix": "jat-http-error-spec",
-      "description": "Jasmine Test Spec (it block), which makes use of angular HttpTestingController to test http requests. We can flush with Error event and mock error data",
+      "description": "Spec that makes use of angular HttpTestingController to test http requests. We can flush with Error event and mock error data",
       "body": [
         "it('should $1', () => {",
           "\t // Action 1: Import HttpTestingController from '@angular/common/http/testing'",
@@ -192,7 +192,7 @@
     },
     "Using Dispatch event": {
       "prefix": "jat-dispatch-event-spec",
-      "description": "Jasmine Test Spec (it block) to dispatch an event to simulate user interactions in unit tests",
+      "description": "Spec that dispatches an event to simulate user interactions in unit tests",
       "body": [
         "it('should $1', () => {",
           "\t // Setup spy and add logics",
@@ -203,6 +203,62 @@
           "\t eventObj.initEvent('$3' /*event type like mouseover/mouseout*/, true, true)",
           "\t element.dispatchEvent(eventObj)",
         "});",
+        ""
+      ]
+    },
+    "Before Each": {
+      "prefix": "jat-before-each",
+      "description": "Creates a before each block",
+      "body": [
+        "beforeEach(() => {",
+        "\t$1",
+        "});",
+        ""
+      ]
+    },
+    "Before Each Async": {
+      "prefix": "jat-before-each-async",
+      "description": "Creates an asynchronous before each block [Deprecated]",
+      "body": [
+        "beforeEach(async () => {",
+        "\t$1",
+        "});",
+        ""
+      ]
+    },
+    "Before Each WaitForAsync": {
+      "prefix": "jat-before-each-wait-for-async",
+      "description": "Creates an asynchronous before each block",
+      "body": [
+        "beforeEach(waitForAsync(() => {",
+        "\t$1",
+        "});",
+        ""
+      ]
+    },
+    "Before Each for Service Testing": {
+      "prefix": "jat-service-before-each",
+      "description": "Creates a before each block for testing your service",
+      "body": [
+        "beforeEach(() => {",
+        "\tTestBed.configureTestingModule({ providers: [/*Your Service*/] });",
+        "});",
+        ""
+      ]
+    },
+    "TestBed Inject": {
+      "prefix": "jat-test-bed-inject",
+      "description": "Utilizes TestBed to inject a service instance (From Angular 9)",
+      "body": [
+        "TestBed.inject(/*Your Service*/)",
+        ""
+      ]
+    },
+    "TestBed Get": {
+      "prefix": "jat-test-bed-get",
+      "description": "Utilizes TestBed to inject a service instance (Before Angular 9)",
+      "body": [
+        "TestBed.get(/*Your Service*/)",
         ""
       ]
     }
