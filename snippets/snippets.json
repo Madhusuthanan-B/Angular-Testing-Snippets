@@ -155,5 +155,58 @@
         "const MOCK_ROUTER_PROVIDER = { provide: Router, useClass: MockRouter };",
         ""
       ]
+    },
+    "Using HttpTestingController for success request": {
+      "prefix": "jat-success-http-testing-controller-spec-expecting-one-request",
+      "description": "Jasmine Test Spec (it block) to inject controller to mock and flush requests, expecting a request matching an address and flushing with mock data without any error",
+      "body": [
+        "it('$1', () => {",
+          "\t // Action 1: Import HttpTestingController from '@angular/common/http/testing'",
+          "\t // Action 2: Create a mock controller variable say. let httpTestingController: HttpTestingController;",
+          "\t // Action 3: While configuring testing module, initialize mock controller variable like, httpTestingController = TestBed.inject(HttpTestingController);",
+          "\t // Add spec logics and spys",
+          "\t $2",
+          "\t const req = httpTestingController.expectOne($3 /*Add expected API request address*/);",
+          "\t // Assert",
+          "\t req.flush($4 /*Add mock data to flush the request with*/);",
+          "\t httpTestingController.verify();",
+        "});",
+        ""
+      ]
+    },
+    "Using HttpTestingController for error request": {
+      "prefix": "jat-error-http-testing-controller-spec-expecting-one-request",
+      "description": "Jasmine Test Spec (it block) to inject controller to mock and flush requests, expecting a request matching an address and flushing with an error",
+      "body": [
+        "it('$1', () => {",
+          "\t // Action 1: Import HttpTestingController from '@angular/common/http/testing'",
+          "\t // Action 2: Create a mock controller variable say. let httpTestingController: HttpTestingController;",
+          "\t // Action 3: While configuring testing module, initialize mock controller variable like, httpTestingController = TestBed.inject(HttpTestingController);",
+          "\t // Add spec logics and spys",
+          "\t $2",
+          "\t const req = httpTestingController.expectOne($3 /*Add expected API request address*/);",
+          "\t // Assert",
+          "\t req.error($4 /*Create an error event and mock error response data to flush the request, eg: new ErrorEvent('Error1'), {}*/);",
+          "\t httpTestingController.verify();",
+        "});",
+        ""
+      ]
+    },
+    "Using Dispatch event": {
+      "prefix": "jat-dispatch-event-spec",
+      "description": "Jasmine Test Spec (it block) to dispatch an event to simulate user interactions in unit tests",
+      "body": [
+        "it('$1', () => {",
+          "\t // Add spec logics and spys",
+          "\t // Select a DOM element on to which need to dispatch an event",
+          "\t const element = $2;",
+          "\t Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createEvent",
+          "\t const eventObj = document.createEvent('SVGEvents')",
+          "\t eventObj.initEvent('$3' /*event type like mouseover/mouseout*/, true, true)",
+          "\t element.dispatchEvent(eventObj)",
+          "\t // Assert",
+        "});",
+        ""
+      ]
     }
 }
